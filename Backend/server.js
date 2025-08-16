@@ -1,11 +1,17 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import summarizeRoutes from './routes/summarize.route.js';
+
 dotenv.config();
 
 const app = express();
+
 app.use(cors());
 app.use(express.json());
+
+// Use the summarize routes for /summarize endpoints
+app.use('/summarize', summarizeRoutes);
 
 app.get('/', (req, res) => {
   res.send('Groq Meeting Notes AI Backend is running!');
