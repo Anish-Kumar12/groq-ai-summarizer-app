@@ -5,7 +5,7 @@ export const summarize = async (req, res) => {
   try {
     let transcriptText = '';
     // Use default prompt if none provided
-    const defaultPrompt = 'Please analyze the following transcript and provide a clear, concise, and well-structured summary highlighting the key points, decisions, and action items. The summary should be suitable for professional review and include any important deadlines or follow-ups.';
+    const defaultPrompt = 'Please provide a brief and focused summary of the meeting transcript, highlighting only the most important decisions, key action items with owners and deadlines, and the next meeting details. Keep the summary clear and no longer than a few sentences.';
     const prompt = req.body.prompt && req.body.prompt.trim() !== '' ? req.body.prompt : defaultPrompt;
 
     if (req.file) {
