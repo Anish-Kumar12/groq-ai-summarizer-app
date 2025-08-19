@@ -1,35 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+      <nav className="fixed top-0 left-0 w-full bg-gradient-to-r from-blue-50 via-blue-100 to-teal-100 shadow-md z-50">
+        <div className="max-w-7xl mx-5 px-4 sm:px-6 lg:px-8">
+          <div className="flex h-20 items-center justify-start">
+            <img
+              src="./public/logo.png" // keep in public folder
+              alt="Groq-AI-Summarizer-App Logo"
+              className="h-20 w-auto drop-shadow-md"
+            />
+          </div>
+        </div>
+      </nav>
+
+      <div className="pt-24 px-4">
+        <h1 className="text-2xl font-bold">Welcome to Groq-AI-Summarizer-App</h1>
+        <p className="mt-4 text-gray-600">
+          This is where your main content goes...
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
